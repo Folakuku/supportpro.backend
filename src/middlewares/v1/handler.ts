@@ -1,5 +1,5 @@
 import { Response, Request, NextFunction } from "express";
-import logger from "@config/logger";
+import logger from "../../config/logger";
 
 export const asyncHandler =
   (cb: Function) => async (req: Request, res: Response) => {

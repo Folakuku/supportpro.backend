@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
-import * as func from "@helpers/func";
-import { Roles } from "@typings/customs";
-import { IUser } from "@typings/user";
+import * as func from "../../helpers/func";
+import { Roles } from "../../typings/customs";
+import { IUser } from "../../typings/user";
 
 const userSchema = new Schema<IUser>(
   {
@@ -31,7 +31,7 @@ const userSchema = new Schema<IUser>(
       type: Boolean,
       default: false,
     },
-    role: {
+    userRole: {
       type: String,
       enum: Roles,
     },

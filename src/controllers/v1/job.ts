@@ -1,8 +1,9 @@
 import { Response, Request } from "express";
 import { sendErrorResponse, sendSuccessResponse } from "../../helpers/response";
-import * as authController from "../../logics/v1/auth";
+import * as jobController from "../../logics/v1/job";
 import { MakeResponse } from "../../typings/customs";
 
+//@TODO export to middleware
 const responseHandler = async (res: Response, response: MakeResponse) => {
   if (response.status) {
     return sendSuccessResponse(
@@ -20,12 +21,7 @@ const responseHandler = async (res: Response, response: MakeResponse) => {
   );
 };
 
-export const register = async (req: Request, res: Response) => {
-  const response = await authController.createUser(req.body);
-  return responseHandler(res, response);
-};
-
-export const login = async (req: Request, res: Response) => {
-  const response = await authController.loginUser(req.body);
+export const create = async (req: Request, res: Response) => {
+  const response = await jobController.createJob(req.body);
   return responseHandler(res, response);
 };

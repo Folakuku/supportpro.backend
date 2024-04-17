@@ -1,5 +1,5 @@
-import User from "@models/v1/user";
-import { IUser } from "@typings/user";
+import User from "../../models/v1/user";
+import { IUser } from "../../typings/user";
 import { HydratedDocument, Types } from "mongoose";
 
 export const createUser = async (

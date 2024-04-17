@@ -10,7 +10,7 @@ export interface IUser {
   gender?: string;
   image?: string;
   country?: string;
-  role: string;
+  userRole: string;
   company?: Types.ObjectId | string;
   recoveryCode: string | null;
   recoveryCodeExpiry: Date | null;

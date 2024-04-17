@@ -1,12 +1,12 @@
-import { IUser } from "@typings/user";
-import * as userRepository from "@repository/v1/user";
-import { makeResponse } from "@helpers/response";
-import { validateEmail } from "@helpers/func";
+import { IUser } from "../../typings/user";
+import * as userRepository from "../../repository/v1/user";
+import { makeResponse } from "../../helpers/response";
+import { validateEmail } from "../../helpers/func";
 import {
   compareHashedPassword,
   generateHashedPassword,
   signToken,
-} from "@helpers/utils";
+} from "../../helpers/utils";
 
 export const createUser = async (userPayload: IUser) => {
   if (!validateEmail(userPayload.email)) {

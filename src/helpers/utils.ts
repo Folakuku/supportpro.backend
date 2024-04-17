@@ -1,12 +1,12 @@
 import bcrypt from "bcrypt";
-import * as userRepository from "@repository/v1/user";
+import * as userRepository from "../repository/v1/user";
 import { v4 as uuid } from "uuid";
-import { IUser } from "@typings/user";
-import { MakeResponse } from "@typings/customs";
+import { IUser } from "../typings/user";
+import { MakeResponse } from "../typings/customs";
 import jwt from "jsonwebtoken";
 import { makeResponse } from "./response";
 import mongoose from "mongoose";
-import env from "@config/env";
+import env from "../config/env";
 
 export const generateHashedPassword = (password: string) => {
   const salt = bcrypt.genSaltSync(10);

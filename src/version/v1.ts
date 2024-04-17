@@ -1,6 +1,5 @@
 import { Application, Request, Response, Router } from "express";
-import v1 from "@routes/v1";
-import logger from "@config/logger";
+import v1 from "../routes/v1";
 
 export default function versionRoutes(app: Application): void {
   // version 1

@@ -13,18 +13,18 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "./dist",
-    "sourceMap": true,
-    "paths": {
-      "@config/*": ["./src/config/*"],
-      "@controllers/*": ["./src/controllers/*"],
-      "@helpers/*": ["./src/helpers/*"],
-      "@logics/*": ["./src/logics/*"],
-      "@middlewares/*": ["./src/middlewares/*"],
-      "@models/*": ["./src/models/*"],
-      "@repository/*": ["./src/repository/*"],
-      "@routes/*": ["./src/routes/*"],
-      "@typings/*": ["./src/typings/*"],
-      "@version/*": ["./src/version/*"]
-    }
+    "sourceMap": true
+    // "paths": {
+    //   "@config/*": ["./src/config/*"],
+    //   "@controllers/*": ["./src/controllers/*"],
+    //   "@helpers/*": ["./src/helpers/*"],
+    //   "@logics/*": ["./src/logics/*"],
+    //   "@middlewares/*": ["./src/middlewares/*"],
+    //   "@models/*": ["./src/models/*"],
+    //   "@repository/*": ["./src/repository/*"],
+    //   "@routes/*": ["./src/routes/*"],
+    //   "@typings/*": ["./src/typings/*"],
+    //   "@version/*": ["./src/version/*"]
+    // }
   }
 }

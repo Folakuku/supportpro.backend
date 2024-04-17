@@ -1,5 +1,5 @@
 import { Response, Request, NextFunction } from "express";
-import { sendSuccessResponse } from "@helpers/response";
+import { sendSuccessResponse } from "../../helpers/response";
 
 export const baseEndpoint = (req: Request, res: Response) => {
   return sendSuccessResponse(res, "Welcome to the base endpoint", {

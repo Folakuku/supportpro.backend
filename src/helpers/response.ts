@@ -1,4 +1,4 @@
-import { MakeResponse } from "@typings/customs";
+import { MakeResponse } from "../typings/customs";
 import { Response } from "express";
 import { ValidationError } from "joi";
 
