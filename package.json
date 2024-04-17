@@ -7,7 +7,7 @@
     "start": "node ./dist/app.js",
     "start:build": "npm run build && npm start",
     "dev": "npx nodemon",
-    "build": "rimraf ./build && tsc -p"
+    "build": "rimraf ./build && tsc"
   },
   "keywords": [],
   "author": "ojokukufolahanmi@gmail.com",
