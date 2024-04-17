@@ -3,7 +3,9 @@ import Joi from "joi";
 export const register = Joi.object({
   body: Joi.object({
     email: Joi.string().email().required(),
-    name: Joi.string().required(),
+    firstName: Joi.string().required(),
+    lastName: Joi.string().required(),
+    middleName: Joi.string().optional(),
     phone: Joi.string().optional(),
     password: Joi.string()
       .min(8)
@@ -17,12 +19,24 @@ export const register = Joi.object({
         "string.min": "Password must be at least 8 characters long",
       }),
   }),
+  country: Joi.string().optional(),
 }).required();
 
 export const login = Joi.object({
   body: Joi.object({
     email: Joi.string().email().required(),
     password: Joi.string().required(),
+  }),
+}).required();
+
+export const profile = Joi.object({
+  body: Joi.object({
+    bio: Joi.string().email().required(),
+    cv: Joi.string().required(),
+    experience: Joi.string().required(),
+    maxSalary: Joi.number().required(),
+    minSalary: Joi.number().required(),
+    role: Joi.array().items(Joi.string()),
   }),
 }).required();
 

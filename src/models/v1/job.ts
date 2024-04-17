@@ -1,6 +1,5 @@
 import { Schema, model } from "mongoose";
-import * as func from "../../helpers/func";
-import { Experience, Roles } from "../../typings/customs";
+import { Experience } from "../../typings/customs";
 import { IJob } from "../../typings/job";
 
 const jobSchema = new Schema<IJob>({

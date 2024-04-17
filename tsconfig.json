@@ -13,7 +13,9 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "./dist",
-    "sourceMap": true
+    "sourceMap": true,
+    "typeRoots": ["./src/typings", "./node_modules/@types"]
+
     // "paths": {
     //   "@config/*": ["./src/config/*"],
     //   "@controllers/*": ["./src/controllers/*"],
@@ -26,5 +28,6 @@
     //   "@typings/*": ["./src/typings/*"],
     //   "@version/*": ["./src/version/*"]
     // }
-  }
+  },
+  "include": ["src/**/*.json", "src/**/*.ts", "src/**/*.tsx"]
 }

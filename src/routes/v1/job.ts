@@ -8,9 +8,9 @@ import validate from "../../middlewares/v1/validators/validate";
 import { asyncHandler } from "../../middlewares/v1/handler";
 
 router.post(
-  "/create",
+  "/",
   // validate(authValidator.register, { body: true }),
   asyncHandler(job.create)
 );
 
-export default (app: Router) => app.use("/job", router);
+export default (app: Router) => app.use("/jobs", router);

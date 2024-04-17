@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import * as func from "../../helpers/func";
 import { Roles } from "../../typings/customs";
-import { IUser } from "../../typings/user";
+import { IProfile, IUser } from "../../typings/user";
 
 const userSchema = new Schema<IUser>(
   {
@@ -14,10 +14,29 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
     },
-    name: {
+    firstName: {
       type: String,
       required: true,
-      set: func.convertToSentenceCase,
+      set: func.firstCharToUpperCase,
+    },
+    lastName: {
+      type: String,
+      required: true,
+      set: func.firstCharToUpperCase,
+    },
+    middleName: {
+      type: String,
+      required: false,
+      set: func.firstCharToUpperCase,
+    },
+    phone: {
+      type: String,
+      required: false,
+    },
+    profile: {
+      type: Schema.Types.ObjectId,
+      ref: "profile",
+      required: false,
     },
     emailVerified: {
       type: Boolean,
@@ -43,4 +62,33 @@ const userSchema = new Schema<IUser>(
   { timestamps: true }
 );
 
-export default model<IUser>("user", userSchema);
+const profileSchema = new Schema<IProfile>({
+  bio: {
+    type: String,
+    required: true,
+  },
+  cv: {
+    type: String,
+    required: true,
+  },
+  role: {
+    type: [String],
+    required: false,
+    lowercase: true,
+  },
+  experience: {
+    type: String,
+    required: true,
+  },
+  maxSalary: {
+    type: Number,
+    required: true,
+  },
+  minSalary: {
+    type: Number,
+    required: true,
+  },
+});
+
+export const User = model<IUser>("user", userSchema);
+export const Profile = model<IProfile>("profile", profileSchema);

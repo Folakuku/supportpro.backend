@@ -6,7 +6,7 @@ export function validateEmail(email: string): boolean {
 }
 
 export function firstCharToUpperCase(str: string): string {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1);
 }
 
 export function convertToSentenceCase(str: string): string {
