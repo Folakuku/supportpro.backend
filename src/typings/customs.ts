@@ -1,9 +1,15 @@
 export const Roles = {
-  admin: "admin",
-  superadmin: "superadmin",
+  Admin: "admin",
+  Superadmin: "superadmin",
   Talent: "talent",
   Recruiter: "recruiter",
 } as const;
+
+export const Experience = {
+  Junior: "junior",
+  Intermediate: "intermediate",
+  Senior: "senior",
+};
 
 export const Plan = {
   Basic: "basic",

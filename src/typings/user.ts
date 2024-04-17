@@ -11,7 +11,7 @@ export interface IUser {
   image?: string;
   country?: string;
   role: string;
-  company: Types.ObjectId | string;
+  company?: Types.ObjectId | string;
   recoveryCode: string | null;
   recoveryCodeExpiry: Date | null;
   verificationCode: string | null;
@@ -21,6 +21,15 @@ export interface IUser {
   createdAt: Date;
   updatedAt: Date;
   __v: number;
+}
+
+export interface IProfile {
+  bio: string;
+  cv: string;
+  role: Types.Array<string>;
+  experience: string;
+  maxSalary: number;
+  minSalary: number;
 }
 
 export interface IOrganization {
